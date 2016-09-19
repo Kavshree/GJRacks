@@ -1,0 +1,238 @@
+
+<div>
+<div ng-app="listApp" ng-controller="listCtrl">
+
+<div class="container-fluid" id="GJracks">
+<div class="row">
+
+<div class="about-rack-container" id="company">
+<div class="container">
+<h2>Company</h2>
+<i class="h4">What do we do?</i>
+<p>We design and build Racks which are frame structures designed for mounting standard 19" rack-mount equipment-servers, routers, UPS systems, switches, audio/video-regardless of vendor. They provide rack equipment organization, security and cable management while enabling airflow. There are two basic types: rack enclosures (also called rack cabinets) and open-frame racks.</p>
+<i class="h4">You need Racks if your business involves maintaining of: </i>
+<p>
+	<ul>
+		<li>Server rooms and data centers</li><li>Closets housing telecommunications equipment</li><li>Audio/video installations</li><li>Industrial environments such as a factory floor</li>
+	</ul>
+</p>
+</div>
+</div>
+
+<div class="wall-mount-container section-with-background" id="wallmount">
+<div class="container">
+<h2> WALL MOUNT RACK</h2>
+
+<div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="imgs/open-frame-enclosure.jpg" alt="">
+              <div class="caption">
+                <h4>Enclosure</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="imgs/wall-mount-enclosure.jpg" alt="">
+              <div class="caption">
+                <h4>Open Frame</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+            </div>
+          </div>
+        </div>
+
+<h3> Enclosures- Wall Mount </h3>
+<p> what is an enclosure this that is a main closure thing about the nothing but that which you are exactly thinking. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+<h3> Open Frames- Wall Mount </h3>
+<p> what is an enclosure this that is a main closure thing about the nothing but that which you are exactly thinking. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+</div>
+</div>
+
+<div class="floor-standing-container" id="floorstanding">
+<div class="container">
+<h2> FLOOR STANDING RACK </h2>
+
+<div class="col-xs-18 col-sm-3 col-md-6">
+<h3> Enclosures- Floor Standing </h3>
+<p> what is an enclosure this that is a main closure thing about the nothing but that which you are exactly thinking. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+<h3> Open Frames- Floor Standing </h3>
+<p> what is an enclosure this that is a main closure thing about the nothing but that which you are exactly thinking. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+</div>
+
+
+<div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="imgs/open-frame-enclosure.jpg" alt="">
+              <div class="caption">
+                <h4>Enclosure</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="imgs/wall-mount-enclosure.jpg" alt="">
+              <div class="caption">
+                <h4>Open Frame</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+            </div>
+          </div>
+        </div>
+
+
+</div>
+</div>
+
+<div class="rack-accessory-container section-with-background" id="accessory">
+<div class="container">
+<h2> RACK ACCESSORY</h2>
+<div ng-repeat="accessory in accessories">
+<div class="col-xs-18 col-sm-6 col-md-3">
+  <div class="thumbnail accessory-thumbnail">
+    <img ng-src="{{accessory.accessory_imgurl}}" alt="">
+      <div class="caption">
+        <h4>{{accessory.accessory_title}}</h4>
+        <button class="btn btn-default" ng-click="open(accessory)">Read more</button>
+
+<!--MODAL WINDOW--> 
+<script type="text/ng-template" id="myModalContent.html">
+<div class="modal-header">
+<h3>{{ accessory.accessory_title }}</h3>
+</div>
+<div class="modal-body">
+<img class="modal-accessory-img col-lg-12 img-responsive" ng-src="{{accessory.accessory_imgurl}}" alt="image">
+{{ accessory.accessory_desc }}
+</div>
+<div class="modal-footer">
+<!--<button class="btn btn-primary" ng-click="ok()">OK</button>-->
+</div>
+</script>
+<!-- MODAL ENDS-->
+
+
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="gallery-container" id="gallery">
+<div class="container">
+<h2> PRODUCT GALLERY</h2>
+<div class="container">
+	<div class="row">
+		<div  ng-repeat="galleryitem in gallery" class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" width="400" height="300" ng-src="{{galleryitem.gallery_imgurl}}" /></div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<div class="contact-container section-with-background" id="contact">
+<div class="container">
+<h2> CONTACT</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form ng-controller="ContactFormController" action="mail_handler.php" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Name</label>
+                            <input type="text" name="cust_name" class="form-control" id="name" placeholder="Enter name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="na" selected="">Choose One:</option>
+                                <option value="service">General Customer Service</option>
+                                <option value="suggestions">Suggestions</option>
+                                <option value="product">Product Support</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">
+                                Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" name="email" class="btn btn-primary pull-right" id="btnContactUs">
+                            Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+                <strong>Twitter, Inc.</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                (123) 456-7890
+            </address>
+            <address>
+                <strong>Full Name</strong><br>
+                <a href="mailto:#">first.last@example.com</a>
+            </address>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+
+</div>
+</div>
+<!--<a href="#/details">details</a>-->
+
+
+<!--footer starts-->
+<div class="row">
+<div class="col-lg-12 padding-lr-0 margin-lr-0">
+<div class="foot-back"></div>
+
+	<div class="row">
+	<div class="black-background text-center"><img src="imgs/logo4.png"></div>
+	</div>
+	<div class="row black-background white-font">
+	<div class=" h5  text-center copy-rightswhite-font"><small>Copy rights reserved GJRacks<sup>&copy;</sup> | Design and Development-</small></div>
+	</div>
+	
+</div>
+</div
+<!--Footer ENDS-->
+
+</div>
+</div>
+
