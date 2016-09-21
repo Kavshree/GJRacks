@@ -1,4 +1,6 @@
 $(document).ready(function(){
+$('#return-to-top').fadeOut();
+
 var menu_height=$('.menu-wrapper').height();
 var window_height=$(window).height();
 
@@ -21,10 +23,12 @@ $(window).on("scroll",function(e){
 
     if($(window).scrollTop() > ($('.menu-wrapper').offset().top)){
         $('.custom-menu-wrapper').addClass('navbar-fixed-top');
+        $('#return-to-top').fadeIn();
         e.preventDefault();
     }
      else{
         $('.custom-menu-wrapper').removeClass('navbar-fixed-top');
+        $('#return-to-top').fadeOut();
         e.preventDefault();
      }
 
